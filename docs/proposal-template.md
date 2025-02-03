@@ -25,11 +25,11 @@ Future add-ons
 
 
 # Method/Approach
-
 We plan on evenly distributing the parts of the project amongst each other, while also offering contributions to all parts of the project whenever needed, or desired. Giving everyone the oppurnity to be able to contribute to an aspect they believe they are greatest at. 
+Additionally, finish brainstorming and the rules of the game before we start coding.
 
 # Estimated Timeline
-
+- 	We also finished the rules of the game last week
 -	Last week we finished the user interface on Figma and finished our brainstorming. 
 -	By the end of next week, we would like to have our basis programming for the game completed
 -	Then we want to ensure that all our components of the game cooperate with each other by optimizing test cases and testing in general.
