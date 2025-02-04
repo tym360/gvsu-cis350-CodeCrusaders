@@ -7,8 +7,8 @@ for local means only, with the hope of adding multiplayer server based gameplay 
 # Team Members and Roles
 
 * [Tyler McTaggart (Role 1) (Role 2)](https://github.com/tym360/CIS350-HW2-McTaggart)
-* Joe Kaceli (Role 3), (Role,4)
-* Member 3 (Role 5, Role 6)
+* Joe Kaceli (Role 3, Role 4)
+* [Hunter Turnbull (Role 5, Role 6)] (https://github.com/Hunter-D-Turnbull/CIS350-HW2-Turnbull)
 * Member 4 (Role 7, Role 8)
 
 # Prerequisites
