@@ -1,6 +1,6 @@
 Team name: Code-Crusadors
 
-Team members: Tyler Mctaggart, Joe Kaceli, Michael Morowski, Hunter Turnball
+Team members: Tyler Mctaggart, Joe Kaceli, Michael Morawski, Hunter Turnball
 
 # Introduction
 
