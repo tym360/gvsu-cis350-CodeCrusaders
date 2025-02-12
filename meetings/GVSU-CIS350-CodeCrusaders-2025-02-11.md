@@ -11,7 +11,7 @@ Time: 5:30 PM
 Discussion Points:
 
 *  What Dictionary Library do we use?
-    * Words API required internet access and allows 2500, calls per day
+    * Words API requires internet access and allows 2500 calls per day
     * Wonderwords is locally ran with unlimited calls. Although, this may be limited.
 *  What UI Framework should we use?
     * Flask, Tkinter, Custom Tkinter, Kivy, and Dear PyGUI mentioned
@@ -23,6 +23,6 @@ Goals for next week (include responsibilities):
 
 * Meet together and finalize rules and colors - All team members (Slack group chat)
 * Test different Word APIs and come to a conclusion on what to use - Michael 
-* Start building simple word game - Tyler & Hunter
+* Start building simple word game framework - Tyler & Hunter
 * Try to design color scheme and logo - Joe
 
