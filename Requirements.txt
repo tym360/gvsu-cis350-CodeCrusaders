@@ -1,0 +1,8 @@
+# Hunter Turnbull
+* Nonfunctional R1: The game shall take low amounts of time to generate words.
+* Nonfunctional R2: The game shall take low time amounts to determine player difficulty.
+* Nonfunctional R3: The UI shall be clear and easy for players to understand.
+
+* Functional R1: The game shall have background music that can be toggled on and off.
+* Functional R2: The game shall be able to raise and lower difficulty based on player performance.
+* Functional R3: The game shall be able to generate unique words consistently.
