@@ -8,9 +8,11 @@ TODO:
 
 import random
 from colorama import Style, Fore;
+import word_generator;
 #Will change to API when chosen
-words = ["tiger", "bacon", "agile", "group", "lingo"]
-Level_word = random.choice(words)
+# words = ["tiger", "bacon", "agile", "group", "lingo"]
+# Level_word = random.choice(words)
+Level_word = word_generator.generate_word()
 
 print(f"Lingo legends {Fore.GREEN}framework{Style.RESET_ALL}")
 print("You will be given 5 attempts to guess the word (5 Letters)")
