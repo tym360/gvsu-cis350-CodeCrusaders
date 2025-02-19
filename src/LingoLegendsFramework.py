@@ -1,3 +1,11 @@
+"""
+TODO:
+-Implement API
+-Develop Difficulty System
+    - Create variable for user global progress and grab word from API. Implementation Depends on API or Library Used.
+- Catch Errors for users submitting words that are smaller.
+"""
+
 import random
 from colorama import Style, Fore;
 #Will change to API when chosen
@@ -8,7 +16,7 @@ print(f"Lingo legends {Fore.GREEN}framework{Style.RESET_ALL}")
 print("You will be given 5 attempts to guess the word (5 Letters)")
 
 User_attempts = 0
-
+winner = False
 while User_attempts < 5:
     Current_attempt = input("Guess " +  str((User_attempts + 1)) + " >>").lower()
     #make sure sure gives the right amount of letters

@@ -6,7 +6,7 @@ for local means only, with the hope of adding multiplayer server based gameplay 
 
 # Team Members and Roles
 
-* [Tyler McTaggart (Role 1) (Role 2)](https://github.com/tym360/CIS350-HW2-McTaggart)
+* [Tyler McTaggart (Project Manager) (Full Stack Developer)](https://github.com/tym360/CIS350-HW2-McTaggart)
 * Joe Kaceli (Role 3, Role 4)
 * [Hunter Turnbull (Role 5, Role 6)](https://github.com/Hunter-D-Turnbull/CIS350-HW2-Turnbull)
 * [Michael Morawski (Role 7, Role 8)](https://github.com/MichaelMorawski/CIS350-HW--Morawski/tree/main)
