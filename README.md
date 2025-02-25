@@ -14,3 +14,9 @@ for local means only, with the hope of adding multiplayer server based gameplay 
 # Prerequisites
 
 # Run Instuctions
+
+* Run python file in terminal:
+```bash
+python3 .\LingoLegendsFramework.py
+```
+* Web app will be running on port 8000
