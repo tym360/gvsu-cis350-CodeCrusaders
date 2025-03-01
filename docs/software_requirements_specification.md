@@ -18,9 +18,11 @@ As shown below are our functional requirements (Features / User Interaction) and
 4. R4: Scores shall be kept based upon a users progression through game.
     1. R4.1: Depending on n attempts to guess each level will be scored upon the formula: 1000 / 2^n. n being the number of attempts.
     2. R4.2: Initials shall be kept for displaying leaderboard
+5. R5: Lingo Legends shall have background music that can be toggled on and off
 
 # Non-Functional Requirements
-1. <Name of Feature 1>
-    1. <Non-Functional Requirement 1>
-    2. <Non-Functional Requirement 2>
-2. <And so on>
+1. R1: Word generating library shall allow up to 1000 word guesses for continued use.
+2. R2: Lingo Legends shall efficiently determine a user's difficulty level 
+3. R3: Lingo Legends shall efficiently generate words
+4. R4: Lingo Legends UI shall be clear and easy for users to understand.
+5. R5: Scoring System / Leaderboard shall be easy to understand and read to prevent user confusion/struggles. 
