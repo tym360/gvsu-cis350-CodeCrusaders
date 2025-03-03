@@ -1,4 +1,4 @@
-#Lingo Legends expanded use-case description
+# Lingo Legends expanded use-case description
 
 Use Case: Starting New Game
 
