@@ -9,14 +9,12 @@ TODO:
 
 import random
 import word_generator
+#Only importing needed functions from PyWebIO in the future we can import all depedning on efficency of program.
 from WebPackage.pywebio.input import input
-from WebPackage.pywebio.output import put_html, put_text
+from WebPackage.pywebio.output import put_html, put_text, clear
 from WebPackage.pywebio import start_server
 
-
-#This is the WebApp Function anything in here can/will be used on the front end of the website. For the time being most game functinos will be held here.
-def WebApp():
-    Styling = """
+Styling = """
     <style>
         body {
             display: flex;
@@ -56,49 +54,83 @@ def WebApp():
         }
     </style>
     """
-
+#Function to greet the user, instead of copying code over and over
+def greeting():
     put_html(Styling)
     put_html("<h1 style='color: green;'>Lingo Legends</h1>")
-    put_html("<h3>You will be given 5 attempts to guess the word (5 Letters) </h3>")
-    
-    Level_word = word_generator.generate_word_medium()
+    put_html("<h3>You will be given 5 attempts to guess words. If you do not guess a word within the given, the game will end.</h3>")
 
+# This is the WebApp Function anything in here can/will be used on the front end of the website.
+def WebApp():
+    rounds = 5
+    current_round = 1
+    game_over = False 
+    Round_Words = []
+    greeting()
+    #New Loop to allow 5 words, can implement difficulty system soon. Rounds can be changed.
+    while current_round <= rounds and not game_over: 
+        
+        put_html(f"<h3>Round {current_round} of {rounds}</h3>")
+        
+        Level_word = word_generator.generate_word_medium()
+        Round_Words.append(Level_word)
+        #For time being word is displayed for testing.
+        put_html(f"Word: {Level_word}") 
 
-    User_attempts = 0
-    winner = False
-    while User_attempts < 5:
-        Current_attempt = input("Guess " +  str((User_attempts + 1)) + " >>").lower()
-        # Make sure user gives the right amount of letters
+        winner = False  
+        User_attempts = 0
+        while User_attempts < 5:
+            Current_attempt = input(f"Guess {str(User_attempts + 1)} >>").lower()
 
-        Progress = ""
-        # Exception handling Below:  Current_Attempt is broken down into an array, something outside of Level_word's length will cause an Index Error.
-        # Test parsing
-        try:
-            for x in range(len(Level_word)):
-                if Current_attempt[x] == Level_word[x]:
-                    Progress += f"<span class='letter correct'>{Current_attempt[x]}</span>"
-                elif Current_attempt[x] in Level_word:
-                    Progress += f"<span class='letter present'>{Current_attempt[x]}</span>"
-                else:
-                    Progress += f"<span class='letter absent'>{Current_attempt[x]}</span>"
-            put_html("<br><br>")
-            put_html(f"<div class='progress'>{Progress.strip()}</div>")
-        # If an IndexError occurs, we will let the user retry the attempt
-        except IndexError:
-            put_text("Please enter a word that is 5 letters long")
-            User_attempts = User_attempts - 1
-        User_attempts = User_attempts + 1
+            Progress = ""
+            try:
+                for x in range(len(Level_word)):
+                    if Current_attempt[x] == Level_word[x]:
+                        Progress += f"<span class='letter correct'>{Current_attempt[x]}</span>"
+                    elif Current_attempt[x] in Level_word:
+                        Progress += f"<span class='letter present'>{Current_attempt[x]}</span>"
+                    else:
+                        Progress += f"<span class='letter absent'>{Current_attempt[x]}</span>"
+                
+                put_html("<br><br>")
+                put_html(f"<div class='progress'>{Progress.strip()}</div>")
+            except IndexError:
+                put_text("Please enter a word that is 5 letters long")
+                User_attempts -= 1  
 
+            User_attempts += 1
 
-        if Current_attempt == Level_word:
-            put_html(f"Yes! the word was: <span class='letter final'>{Level_word}</span>")
-            winner = True
-            break
+            # Check if the user has guessed the word correctly
+            if Current_attempt == Level_word:
+                put_html(f"Yes! The word was: <span class='letter final'>{Level_word}</span>")
+                #Clear is used in the following two functions so that the user only sees the current round they are on.
+                clear()
+                greeting()
+                winner = True
+                break
 
-    if(winner != True):
-        put_html(f"You have used all of your attempts! The correct word was: <span class='letter final'>{Level_word}</span>")
+        if not winner:
+            put_html(f"You have used all of your attempts for this round! The correct word was: <span class='letter final'>{Level_word}</span>")
+            clear()
+            put_html(Styling)
+            game_over = True  
+        else:
+            current_round += 1
 
+    if current_round > rounds:  
+        put_html("<h2>Congratulations! You've completed the game!</h2>")
+        put_html("<h1>Words used this round:</h1>")
+        for x in range(len(Round_Words)):
+            put_html(f"<h3>Round {str(x + 1)}: {Round_Words[x]}</h3>")
+    else: 
+        put_html("<h2>Game Over! Try again next time!</h2>")
 
-#This is the init __main__ funcion. We are currently hosting this website on port 8000.
+        put_html("<h1>Words used this round:</h1>")
+        for x in range(len(Round_Words)):
+            put_html(f"<h3>Round {str(x + 1)}: {Round_Words[x]}</h3>")
+        
+
+# This is the init __main__ function. We are currently hosting this website on port 8000.
 if __name__ == '__main__':
     start_server(WebApp, port=8000)
+
