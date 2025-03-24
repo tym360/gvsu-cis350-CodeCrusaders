@@ -8,8 +8,8 @@ TODO:
 """
 
 import random
+import time
 import word_generator
-#Only importing needed functions from PyWebIO in the future we can import all depedning on efficency of program.
 from WebPackage.pywebio.input import input
 from WebPackage.pywebio.output import put_html, put_text, clear
 from WebPackage.pywebio import start_server
@@ -54,7 +54,7 @@ Styling = """
         }
     </style>
     """
-#Function to greet the user, instead of copying code over and over
+
 def greeting():
     put_html(Styling)
     put_html("<h1 style='color: green;'>Lingo Legends</h1>")
@@ -66,15 +66,14 @@ def WebApp():
     current_round = 1
     game_over = False 
     Round_Words = []
+    RoundPoints = 0
     greeting()
-    #New Loop to allow 5 words, can implement difficulty system soon. Rounds can be changed.
     while current_round <= rounds and not game_over: 
         
         put_html(f"<h3>Round {current_round} of {rounds}</h3>")
         
         Level_word = word_generator.generate_word_medium()
         Round_Words.append(Level_word)
-        #For time being word is displayed for testing.
         put_html(f"Word: {Level_word}") 
 
         winner = False  
@@ -102,8 +101,11 @@ def WebApp():
 
             # Check if the user has guessed the word correctly
             if Current_attempt == Level_word:
+                WordPoints = ((500 // (rounds / 5))//2**User_attempts)
+                RoundPoints += WordPoints
                 put_html(f"Yes! The word was: <span class='letter final'>{Level_word}</span>")
-                #Clear is used in the following two functions so that the user only sees the current round they are on.
+                put_html(f"Current Round Points: {int(RoundPoints)}")
+                time.sleep(2)
                 clear()
                 greeting()
                 winner = True
@@ -119,6 +121,7 @@ def WebApp():
 
     if current_round > rounds:  
         put_html("<h2>Congratulations! You've completed the game!</h2>")
+        put_html(f"<h3>Total Points: {int(RoundPoints)}</h3>")
         put_html("<h1>Words used this round:</h1>")
         for x in range(len(Round_Words)):
             put_html(f"<h3>Round {str(x + 1)}: {Round_Words[x]}</h3>")
@@ -127,10 +130,9 @@ def WebApp():
 
         put_html("<h1>Words used this round:</h1>")
         for x in range(len(Round_Words)):
-            put_html(f"<h3>Round {str(x + 1)}: {Round_Words[x]}</h3>")
+            put_html(f"<h3>Word {str(x + 1)}: {Round_Words[x]}</h3>")
         
 
 # This is the init __main__ function. We are currently hosting this website on port 8000.
 if __name__ == '__main__':
     start_server(WebApp, port=8000)
-
