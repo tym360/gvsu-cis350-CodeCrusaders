@@ -72,7 +72,7 @@ def WebApp():
         
         put_html(f"<h3>Round {current_round} of {rounds}</h3>")
         
-        Level_word = word_generator.generate_word_medium()
+        Level_word = word_generator.generate_word(current_round)
         Round_Words.append(Level_word)
         put_html(f"Word: {Level_word}") 
 

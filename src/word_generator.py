@@ -10,13 +10,14 @@ from wonderwords import RandomWord
 r = RandomWord()
 
 
-def generate_word_easy():
-    return r.word(include_parts_of_speech=["nouns"], word_min_length=5, word_max_length=5)
-
-
-def generate_word_medium():
-    return r.word(word_min_length=5, word_max_length=5)
-
-
-def generate_word_hard():
-    return r.word(word_min_length=5, word_max_length=6)
+def generate_word(round):
+    if round == 1:
+        r.word(word_min_length=5, word_max_length=5)
+    if round == 2:
+        r.word(word_min_length=5, word_max_length=6)
+    if round == 3:
+        r.word(word_min_length=6, word_max_length=6)
+    if round == 4:
+        r.word(word_min_length=6, word_max_length=7)
+    if round == 5:
+        r.word(word_min_length=7, word_max_length=7)
