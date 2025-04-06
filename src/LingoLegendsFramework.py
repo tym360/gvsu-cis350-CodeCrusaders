@@ -5,8 +5,6 @@ from WebPackage.pywebio.output import put_html, put_text, clear
 from WebPackage.pywebio import start_server
 """
 TODO:
-Need to list amount of letters for each word
-Need to Let user know 5 seconds to go to next round. 
 """
 Styling = """
     <style>
@@ -52,8 +50,9 @@ Styling = """
 def greeting(level):
     put_html(Styling)
     put_html("<h1 style='color: green;'>Lingo Legends</h1>")
-    put_html(f"<h2>Level {level}</h2>")
     put_html("<h3>You will be given 5 attempts to guess each word.</h3>")
+    put_html(f"<h2>Level {level} of 5 Levels</h2>")
+
 
 def play_level(current_level):
     rounds = 5
@@ -65,11 +64,11 @@ def play_level(current_level):
     greeting(current_level)
 
     while current_round <= rounds and not round_over: 
-        put_html(f"<h3>Round {current_round} of {rounds}</h3>")
+        put_html(f"<h3>Word {current_round} of {rounds}</h3>")
 
         Level_word = word_generator.generate_word(current_level)
         Round_Words.append(Level_word)
-
+        put_html(f"<h3>Amount of Letters {len(Level_word)}</h3>")
         put_html(f"Word: {Level_word}") 
 
         winner = False  
@@ -131,8 +130,7 @@ def WebApp():
     for round_number in range(1, total_rounds + 1):
         clear()
         #How many words are left in each round.
-        put_html(f"<h2> Round {round_number} of {total_rounds}</h2>")
-        score, words, failed = play_level(round_number)  # use round_number as level
+        score, words, failed = play_level(round_number) 
 
         total_score += score
         total_words.extend(words)
@@ -140,30 +138,31 @@ def WebApp():
         if failed:
             clear()
             put_html("<h2>Game Over!</h2>")
-            put_html(f"<h3>Round {round_number} Score: {score}</h3>")
-            put_html(f"<h3>Total Score: {total_score}</h3>")
+            put_html(f"<h3>Round {round_number} Score: <i>{score}</i></h3>")
+            put_html(f"<h3>Total Score: <i>{total_score}</i></h3>")
             put_html("<h3>Words Used This Round:</h3>")
             # On game over display the words so far used.
             for i, word in enumerate(words):
                 put_html(f"<h4>Word {i+1}: {word}</h4>")
-            break  # stop the game early if the user fails
+            break 
 
         # Only show round summary for rounds 1-4
         if round_number < total_rounds:
             put_html("<h2>Round Complete!</h2>")
-            put_html(f"<h3>Round {round_number} Score: {score}</h3>")
-            put_html(f"<h3>Total Score: {total_score}</h3>")
+            put_html(f"<h3>Round {round_number} Score: <i>{score}</i></h3>")
+            put_html(f"<h3>Total Score: <i>{total_score}</i></h3>")
             put_html("<h3>Words Used This Round:</h3>")
             #Display words in round
             for i, word in enumerate(words):
                 put_html(f"<h4>Word {i+1}: {word}</h4>")
+            put_html("<h3>Next Round Starting in 5 seconds...</h3>")
             time.sleep(5)
 
     else:
-        # If all 5 rounds were completed (i.e., didn't break early)
+        
         clear()
         put_html("<h2>Thanks for playing Lingo Legends!</h2>")
-        put_html(f"<h3>Final Score: {total_score}</h3>")
+        put_html(f"<h3>Final Score: <i>{total_score}</i></h3>")
         put_html("<h3>All Words Used:</h3>")
         #DIsplay all words used in the game
         for i, word in enumerate(total_words):
