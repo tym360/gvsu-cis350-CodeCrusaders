@@ -1,8 +1,9 @@
 # Overview
-<Describe the purpose of this document in 1 paragraph of less … hint: it is
-your SRS>
+<Describe the purpose of this document in 1 paragraph of less … hint: it is your SRS>
+
 # Software Requirements
 <Describe the structure of this section>
+
 ## Functional Requirements
 ### <Name of Feature 1>
 | ID | Requirement |
@@ -28,4 +29,5 @@ your SRS>
 | … | … |
 # Software Artifacts
 <Describe the purpose of this section>
+
 * [I am a link](to_some_file.pdf)
