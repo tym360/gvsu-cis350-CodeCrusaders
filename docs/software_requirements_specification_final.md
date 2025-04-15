@@ -60,5 +60,5 @@
 <Describe the purpose of this section>
 
 * [Use Case Diagram](https://github.com/tym360/gvsu-cis350-CodeCrusaders/blob/main/artifacts/use_case_diagram/UseCaseDiagram.png)
-* [Use Case Diagram]()
+* [UML Class Diagram](https://github.com/tym360/gvsu-cis350-CodeCrusaders/blob/main/artifacts/LingoLegendsUML.pdf)
 * [Use Case Diagram]()
