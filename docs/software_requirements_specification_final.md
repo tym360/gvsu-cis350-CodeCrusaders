@@ -1,19 +1,19 @@
 # Overview
-<Describe the purpose of this document in 1 paragraph of less … hint: it is your SRS>
+<Describe: This document is serving as our final checklist and validation tool, it helps us confirm that we actually built what all 4 of us orignally agreed to, with some minor changes. This allows us to go back through and make sure each of our features stated are working as described. Allowing all who are interested in our game to understand the intentions behind our software used.>
 
 # Software Requirements
 <Describe the structure of this section>
 
 ## Functional Requirements
-### <Name of Feature 1>
+### <Game Navigation and Interface>
 | ID | Requirement |
 | :-------------: | :----------: |
-| FR1 | <Requirement 1> |
-| FR2 | <Requirement 2> |
-| FR3 | <Requirement 3> |
-| FR4 | … |
+| FR1 | <Home screen shall be displayed when going to locally hosted website.> |
+| FR2 | <Game level shall be displayed when the play button is selected on the home screen.> |
+| FR3 | <Leaderboard page shall be displayed when leaderboard button is selected on Home Screen> |
+| FR4 | <Lingo Legends shall have background music that can be toggled on and off> |
 | FR5 | … |
-### <Name of Feature 2>
+### <Difficulty>
 | ID | Requirement |
 | :-------------: | :----------: |
 | FR6 | <Requirement 1> |
@@ -21,7 +21,7 @@
 | FR8 | <Requirement 3> |
 | FR9 | … |
 | FR10 | … |
-### <Name of Feature 3>
+### <User Input>
 | ID | Requirement |
 | :-------------: | :----------: |
 | FR11 | <Requirement 1> |
@@ -31,7 +31,7 @@
 | FR15 | … |
 
 ## Non-Functional Requirements
-### <Name of Feature 1>
+### <Accessability>
 | ID | Requirement |
 | :-------------: | :----------: |
 | NFR1 | <Non-Functional Requirement 1> |
@@ -39,7 +39,7 @@
 | NFR3 | < Non-Functional Requirement 3> |
 | NFR4 | … |
 | NFR5 | … |
-### <Name of Feature 2>
+### <>
 | ID | Requirement |
 | :-------------: | :----------: |
 | NFR6  | <Non-Functional Requirement 1> |
