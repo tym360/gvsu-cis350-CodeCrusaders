@@ -13,10 +13,17 @@ for local means only, with the hope of adding multiplayer server based gameplay 
 
 # Prerequisites
 
+* Make sure you have pywebio installed:
+```bash
+pip3 install -U pywebio
+OR
+pip install pywebio
+```
+
 # Run Instuctions
 
 * Run python file in terminal:
 ```bash
 python3 .\LingoLegendsFramework.py
 ```
-* Web app will be running on port 8000
+* IP and port will be provided for access in preferred web browser.
