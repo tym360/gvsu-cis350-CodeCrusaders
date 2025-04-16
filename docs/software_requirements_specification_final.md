@@ -12,14 +12,14 @@ This document is serving as our final checklist and validation tool, it helps us
 | FR2 | Game level shall be displayed when the play button is selected on the home screen. |
 | FR3 | Leaderboard page shall be displayed when leaderboard button is selected on Home Screen |
 | FR4 | Lingo Legends shall have background music that can be toggled on and off |
-| FR5 | … |
+| FR5 | Game will stop running when close button is pressed. |
 ### <Gameplay>
 | ID | Game Mehanics |
 | :-------------: | :----------: |
 | FR6 | Each level's difficulty shall be set based upon a user's progress |
 | FR7 | A game word shall be picked from the WonderWords API before each round according to user's difficulty level |
 | FR8 | Previously attempted words shall be stored in an array to prevent repeats. |
-| FR9 | … |
+| FR9 | Users will be told correct letters for incorrect words. |
 | FR10 | … |
 ### <User Incentives>
 | ID | Scoring and Leaderboard |
