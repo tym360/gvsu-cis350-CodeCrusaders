@@ -213,7 +213,6 @@ def WebApp():
                 put_html("<h2>Game Over!</h2>")
                 put_html(f"<h3>Round {round_number} Score: <i>{score}</i></h3>")
                 put_html(f"<h3>Total Score: <i>{total_score}</i></h3>")
-                put_html("<h3>Words Used This Round:</h3>")
 
                 AfterFail = actions('', buttons=[
                     {'label': 'Post Score to Leaderboard?', 'value': 'PostScore'},
