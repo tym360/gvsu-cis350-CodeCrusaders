@@ -3,5 +3,4 @@ John,2200
 Taylor,1900
 Daniel,1800
 
-Test4Failed,500
-Test3Finished,6250
+

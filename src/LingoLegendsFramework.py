@@ -155,9 +155,8 @@ def ShowLeaderboard():
         MainMenu()
 
 def MainMenu():
+
     put_html(Styling)
-
-
     put_html("<h1 style='color: green;'>Welcome to Lingo Legends!</h1>")
     put_html("<h3>This is a 5-level word guessing game. Try to guess the word in 5 attempts!</h3>")
     put_html("<h4>Click below when you're ready to start.</h4>")
