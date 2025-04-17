@@ -5,7 +5,7 @@ This document is serving as our final checklist and validation tool, it helps us
 Below serves as our Software Requirment Specification System. Using an SRS will allow us to manage our different features/requirements for Lingo Legends. As shown below are our functional requirements (Features / User Interaction) and Non-Functional Requirements(Performance / Standards).
 
 ## Functional Requirements
-### <Home screen>
+### Home screen
 | ID | Navigation and Interface |
 | :-------------: | :----------: |
 | FR1 | Home screen shall be displayed when going to locally hosted website. |
@@ -13,7 +13,7 @@ Below serves as our Software Requirment Specification System. Using an SRS will 
 | FR3 | Leaderboard page shall be displayed when leaderboard button is selected on the home or game over screen|
 | FR4 | User shall have the ability to access leaderboards and other features continuously without refreshing website|
 | FR5 | Game will stop running when close button is pressed. |
-### <Gameplay>
+### Gameplay
 | ID | Game Mechanics |
 | :-------------: | :----------: |
 | FR6 | Each level's difficulty shall be set based upon a user's progress |
@@ -21,7 +21,7 @@ Below serves as our Software Requirment Specification System. Using an SRS will 
 | FR8 | Previously attempted words shall be stored in an array to prevent repeats. |
 | FR9 | When a user fails to guess the word within 5 attemps the game over screen shall be shown|
 | FR10 | Users shall be told correct word for failing attempt. |
-### <User Incentives>
+### User Incentives
 | ID | Scoring and Leaderboard |
 | :-------------: | :----------: |
 | FR11 | When a user does not guess  word within given attempts for round, score shall be displayed while asking for name for leaderboard |
@@ -31,7 +31,7 @@ Below serves as our Software Requirment Specification System. Using an SRS will 
 | FR15 | Upon completetion of a round, the user shall be passed to the next round with x-1 attempts. |
 
 ## Non-Functional Requirements
-### <Screen Displays>
+### Screen Displays
 | ID | Accessibility |
 | :-------------: | :----------: |
 | NFR1 | The game interface shall provide clear visual feedback after each guess. |
@@ -39,7 +39,7 @@ Below serves as our Software Requirment Specification System. Using an SRS will 
 | NFR3 | Lingo Legends shall have appropriate difficulty accellaration to tend to multiple audiences. |
 | NFR4 | Leaderboard shall be accessible using a screen reader for vision impared individuals. |
 | NFR5 | Lingo Legends shall not prematurely timeout |
-### <Processing time>
+### Processing time
 | ID | Performance and Reliability |
 | :-------------: | :----------: |
 | NFR6  | Game word retrieval from the wonderwords API shall take no longer than 2 seconds. |
@@ -47,7 +47,7 @@ Below serves as our Software Requirment Specification System. Using an SRS will 
 | NFR8  | If the API fails, the system shall fall back to a local word list to continue gameplay. |
 | NFR9  | Attempts and game state shall persist in memory without loss until the session ends. |
 | NFR10 | Leaderboard shall filter and display results in no longer than 1.5 seconds. |
-### <Scalability>
+### Scalability
 | ID | Maintainability |
 | :-------------: | :----------: |
 | NFR11 | The Python codebase shall follow PEP8 coding standards for readability |
