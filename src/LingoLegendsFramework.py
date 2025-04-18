@@ -73,7 +73,7 @@ def play_level(current_level):
         Level_word = word_generator.generate_word(current_level)
         Round_Words.append(Level_word)
         put_html(f"<h3>Amount of Letters {len(Level_word)}</h3>")
-        put_html(f"Word: {Level_word}") 
+        #put_html(f"Word: {Level_word}") 
 
         winner = False  
         User_attempts = 0

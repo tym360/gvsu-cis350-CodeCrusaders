@@ -20,6 +20,11 @@ OR
 pip install pywebio
 ```
 
+* Make sure user-agents is installed:
+```bash
+pip install user-agents
+```
+
 # Run Instuctions
 
 * Run python file in terminal:
